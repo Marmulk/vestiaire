@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vestiaire Privacy Policy</title>
+<style>
+:root { --papier: #F4F1EC; --encre: #1A1917; --encre2: rgba(26,25,23,.64); --filet: rgba(26,25,23,.12); }
+@media (prefers-color-scheme: dark) { :root { --papier: #161514; --encre: #F2EFEA; --encre2: rgba(242,239,234,.64); --filet: rgba(242,239,234,.14); } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--papier); color: var(--encre); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+.maison { font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-size: 13px; color: var(--encre2); margin: 0 0 28px; }
+.maison a { color: inherit; text-decoration: none; }
+h1 { font-weight: 900; text-transform: uppercase; font-size: clamp(30px, 7vw, 46px); line-height: 1.02; letter-spacing: -.01em; margin: 0; padding-bottom: 14px; border-bottom: 2px solid var(--encre); }
+h2 { font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: 14px; margin: 40px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--encre); }
+h3 { font-size: 17px; margin: 26px 0 6px; }
+p, li { color: var(--encre); }
+ul { padding-inline-start: 1.2em; }
+li { margin: 6px 0; }
+a { color: var(--encre); }
+.date { color: var(--encre2); font-size: 15px; margin-top: 14px; }
+.a-choisir { background: #F2D27A; color: #1A1917; padding: 0 .25em; }
+nav.langues { margin-top: 56px; padding-top: 14px; border-top: 1px solid var(--filet); font-size: 14px; color: var(--encre2); }
+nav.langues a { margin-inline-end: 14px; color: var(--encre2); }
+</style>
+</head>
+<body>
+<main>
+<p class="maison"><a href="../index.html">Vestiaire</a></p>
+<h1>Vestiaire Privacy Policy</h1>
+<p class="date">Last updated: 30 October 2026</p>
+<h2>In short</h2>
+<ul><li>Vestiaire has no accounts, no advertising, no tracking and no analytics tools.</li><li>Your wardrobe stays on your iPhone and, if iCloud is turned on, in your private iCloud space, which we cannot access.</li><li>To fill in a piece’s details, its photo is sent to Claude, Anthropic’s artificial intelligence, through our relay, with your consent. We do not keep it, and neither does the relay.</li><li>The weather service only receives an approximate location, to the nearest kilometre.</li></ul>
+<h2>1. Who is responsible</h2>
+<p>Vestiaire is developed and published by Magomed Mazaev. For any question about your data: vestiaire.assistance@icloud.com.</p>
+<h2>2. What stays on your device</h2>
+<p>The photos of your pieces, their details (name, brand, category, colours, material, seasons, fit, pattern), your outfits, your journal, your trips and your settings are stored in Vestiaire, on your iPhone.</p>
+<p>If iCloud is turned on for Vestiaire, this data is copied to the private database of your iCloud account (CloudKit), so that you can find it on your other devices. There it is managed by Apple, and only your account can read it: we have no access to it.</p>
+<p>The ‘Outfit of the day’ widget reads the outfit the app leaves for it on the device. The ‘.vestiaire’ backups you export go wherever you send them (Files, AirDrop, email…).</p>
+<h2>3. What leaves your device, and why</h2>
+<h3>Claude’s analysis of your pieces</h3>
+<p>When you add a piece, have your wardrobe re-read or look for a piece’s product page, Vestiaire sends the following to our relay:</p>
+<ul><li>the photo of the piece, reduced to 1,024 pixels on its longest side;</li><li>for a product page search, the brand and name of the piece;</li><li>the app’s language;</li><li>the identifier described below.</li></ul>
+<p>The relay, hosted by Vercel, passes the photo and these words to Anthropic’s Claude, then sends the answer back to you: the fields for the piece’s details, or the addresses of the product pages. For a product page, Claude searches the web for the brand and model it has recognised. We do not keep the photos or the answers, and neither does the relay. Anthropic processes them under the terms of its commercial offering: it does not use them to train its models and keeps them only for a limited period (see its privacy policy: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a>).</p>
+<p>Vestiaire asks for your consent before sending anything for the first time. Without this consent, you can fill in the details yourself.</p>
+<h3>A randomly generated identifier</h3>
+<p>On installation, Vestiaire generates a random identifier that says nothing about you. It is not linked to your identity, to your Apple Account or to advertising identifiers. It is used only to limit the number of analyses per device per day (the quota). The relay’s counter, hosted by Supabase, contains only this identifier and the number of requests made that day. If you delete the app and then reinstall it, you get a new identifier.</p>
+<h3>The weather</h3>
+<p>For today’s weather, Vestiaire sends Open-Meteo (open-meteo.com) your location rounded to the nearest kilometre. Open-Meteo keeps its technical logs, which may contain these coordinates, for 90 days at most. For the weather in another city or for a trip, it sends Open-Meteo the name of the city you type, then its coordinates. The name of your city is found by Apple’s geolocation service. Vestiaire only asks for your location while you are using the app. You can refuse and choose a city manually.</p>
+<h3>The built-in browser</h3>
+<p>When you look for a piece’s product photo, the pages (image search engine, shops) open in a browser built into the app. As with any visit, these sites receive your IP address and may set cookies, which the browser keeps on the device. They apply their own privacy policies. The search starts from the words of the analysis, for example the brand and the type of piece.</p>
+<h3>Apple’s services</h3>
+<p>iCloud sync uses Apple’s silent notifications to learn about changes made on your other devices. The morning notification, if you turn it on, is scheduled on the device itself.</p>
+<h2>4. What Vestiaire does not do</h2>
+<ul><li>No account, no advertising, no tracking across apps or websites, no analytics, no crash reports sent to a third party.</li><li>No selling or sharing of your data with data brokers or advertisers.</li><li>No access to your contacts. For Photos, Vestiaire only asks for permission to add images, so that it can save your posters and tickets there. The photo picker only gives it the photos you choose. The camera is only used when you take a photo.</li></ul>
+<h2>5. Services that process data for Vestiaire</h2>
+<ul><li>Anthropic (Claude): photo analysis and product page searches.</li><li>Vercel: hosting the relay.</li><li>Supabase: the quota counter.</li><li>Open-Meteo: weather and city search.</li><li>Apple: iCloud, geolocation and notifications.</li></ul>
+<p>These services may process data in countries other than yours, in particular in the United States.</p>
+<h2>6. Your choices and your rights</h2>
+<ul><li>Decline the analysis: you fill in the details yourself.</li><li>Decline location access: you choose a city manually.</li><li>Turn off iCloud for Vestiaire in your iPhone’s Settings. Vestiaire’s iCloud data can be deleted from your iPhone’s Settings: tap your name, then iCloud, then go to storage management.</li><li>Delete pieces, or the whole app: its local data disappears with it.</li></ul>
+<p>You have the rights the law gives you, in particular under the General Data Protection Regulation (GDPR / UK GDPR): access, rectification, erasure and objection. As we keep no data linked to your identity, most of these rights can be exercised directly in the app. For any request: vestiaire.assistance@icloud.com. You can also lodge a complaint with the data protection authority in your country (in the United Kingdom, the ICO).</p>
+<h2>7. Children</h2>
+<p>Vestiaire is not aimed at children and does not knowingly collect any data about them.</p>
+<h2>8. Changes</h2>
+<p>If this policy changes, the date at the top of the page changes too. Any significant change will be announced in the app.</p>
+<nav class="langues"><a href="../fr/confidentialite.html" lang="fr">Français</a> <a href="../en/confidentialite.html" lang="en-GB">English</a> <a href="../de/confidentialite.html" lang="de">Deutsch</a> <a href="../ru/confidentialite.html" lang="ru">Русский</a> <a href="../pt-PT/confidentialite.html" lang="pt-PT">Português (Portugal)</a> <a href="../pt-BR/confidentialite.html" lang="pt-BR">Português (Brasil)</a> <a href="../ar/confidentialite.html" lang="ar">العربية</a></nav>
+</main>
+</body>
+</html>

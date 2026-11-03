@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سياسة الخصوصية لتطبيق Vestiaire</title>
+<style>
+:root { --papier: #F4F1EC; --encre: #1A1917; --encre2: rgba(26,25,23,.64); --filet: rgba(26,25,23,.12); }
+@media (prefers-color-scheme: dark) { :root { --papier: #161514; --encre: #F2EFEA; --encre2: rgba(242,239,234,.64); --filet: rgba(242,239,234,.14); } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--papier); color: var(--encre); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+.maison { font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-size: 13px; color: var(--encre2); margin: 0 0 28px; }
+.maison a { color: inherit; text-decoration: none; }
+h1 { font-weight: 900; text-transform: uppercase; font-size: clamp(30px, 7vw, 46px); line-height: 1.02; letter-spacing: -.01em; margin: 0; padding-bottom: 14px; border-bottom: 2px solid var(--encre); }
+h2 { font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: 14px; margin: 40px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--encre); }
+h3 { font-size: 17px; margin: 26px 0 6px; }
+p, li { color: var(--encre); }
+ul { padding-inline-start: 1.2em; }
+li { margin: 6px 0; }
+a { color: var(--encre); }
+.date { color: var(--encre2); font-size: 15px; margin-top: 14px; }
+.a-choisir { background: #F2D27A; color: #1A1917; padding: 0 .25em; }
+nav.langues { margin-top: 56px; padding-top: 14px; border-top: 1px solid var(--filet); font-size: 14px; color: var(--encre2); }
+nav.langues a { margin-inline-end: 14px; color: var(--encre2); }
+</style>
+</head>
+<body>
+<main>
+<p class="maison"><a href="../index.html">Vestiaire</a></p>
+<h1>سياسة الخصوصية لتطبيق Vestiaire</h1>
+<p class="date">آخر تحديث: 30 أكتوبر 2026</p>
+<h2>باختصار</h2>
+<ul><li>لا حسابات في Vestiaire، ولا إعلانات، ولا تتبّع، ولا أدوات لقياس الجمهور.</li><li>تبقى خزانتك على جهاز iPhone الخاص بك، وإذا كان iCloud مفعّلًا، ففي مساحتك الخاصة على iCloud، التي لا يمكننا الوصول إليها.</li><li>لملء بطاقة قطعة ما، تُرسَل صورتها إلى Claude، الذكاء الاصطناعي من Anthropic، عبر خادمنا الوسيط، وبموافقتك. ولا يحتفظ بها الخادم الوسيط، ولا نحتفظ بها نحن.</li><li>لا تتلقى خدمة الطقس إلا موقعًا تقريبيًا، في حدود الكيلومتر.</li></ul>
+<h2>1. من المسؤول</h2>
+<p>يتولى Magomed Mazaev تطوير Vestiaire ونشره. لأي سؤال بشأن بياناتك: vestiaire.assistance@icloud.com.</p>
+<h2>2. ما يبقى على جهازك</h2>
+<p>تُحفَظ صور قطعك وبطاقاتها (الاسم والعلامة التجارية والفئة والألوان والخامة والمواسم والقصّة والنقش)، وإطلالاتك ويومياتك ورحلاتك وإعداداتك، في Vestiaire، على جهاز iPhone الخاص بك.</p>
+<p>إذا كان iCloud مفعّلًا لتطبيق Vestiaire، تُنسَخ هذه البيانات إلى قاعدة البيانات الخاصة بحسابك على iCloud (CloudKit)، لتجدها على أجهزتك الأخرى. وتتولى Apple إدارتها هناك، ولا يستطيع قراءتها إلا حسابك: فلا يمكننا الوصول إليها.</p>
+<p>تقرأ أداة «إطلالة اليوم» الإطلالة التي يتركها لها التطبيق على الجهاز. أما النسخ الاحتياطية «‎.vestiaire» التي تصدّرها، فتذهب حيث ترسلها («الملفات»، AirDrop، البريد الإلكتروني…).</p>
+<h2>3. ما يغادر جهازك، ولماذا</h2>
+<h3>تحليل القطع بواسطة Claude</h3>
+<p>عندما تضيف قطعة، أو تطلب إعادة قراءة خزانتك، أو تبحث عن صفحة المنتج لقطعة ما، يرسل Vestiaire إلى خادمنا الوسيط:</p>
+<ul><li>صورة القطعة، مصغّرة بحيث لا يتجاوز ضلعها 1024 بكسل؛</li><li>عند البحث عن صفحة منتج، العلامة التجارية للقطعة واسمها؛</li><li>لغة التطبيق؛</li><li>المعرّف الموضّح أدناه.</li></ul>
+<p>ينقل الخادم الوسيط، الذي تستضيفه Vercel، الصورة وهذه الكلمات إلى Claude من Anthropic، ثم يعيد إليك الرد: حقول البطاقة، أو عناوين صفحات المنتجات. وفي حالة صفحة المنتج، يبحث Claude على الويب عن العلامة التجارية والطراز اللذين تعرّف عليهما. ولا نحتفظ نحن ولا الخادم الوسيط بالصور أو الردود. وتعالجها Anthropic وفق شروط عرضها المخصّص للمحترفين: فهي لا تستخدمها لتدريب نماذجها، ولا تحتفظ بها إلا لمدة محدودة (راجع سياسة الخصوصية الخاصة بها: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a>).</p>
+<p>يطلب Vestiaire موافقتك قبل أول إرسال. ومن دون هذه الموافقة، يمكنك ملء البطاقات بنفسك.</p>
+<h3>معرّف يُنشأ عشوائيًا</h3>
+<p>عند التثبيت، يُنشئ Vestiaire عشوائيًا معرّفًا لا يكشف شيئًا عنك. فهو غير مرتبط بهويتك، ولا بحساب Apple الخاص بك، ولا بمعرّفات الإعلانات. ولا يُستخدم إلا للحدّ من عدد التحليلات لكل جهاز في اليوم (الحصة). ولا يحتوي عدّاد الخادم الوسيط، الذي تستضيفه Supabase، إلا على هذا المعرّف وعدد طلبات اليوم. وإذا حذفت التطبيق ثم أعدت تثبيته، تحصل على معرّف جديد.</p>
+<h3>الطقس</h3>
+<p>لطقس اليوم، يرسل Vestiaire إلى Open-Meteo (open-meteo.com) موقعك مقرّبًا إلى أقرب كيلومتر. وتحتفظ Open-Meteo بسجلاتها التقنية، التي قد تتضمن هذه الإحداثيات، لمدة لا تتجاوز 90 يومًا. ولطقس مدينة أخرى أو رحلة، يرسل إلى Open-Meteo اسم المدينة الذي تكتبه، ثم إحداثياتها. ويُعرَف اسم مدينتك عبر خدمة تحديد الموقع الجغرافي من Apple. ولا يطلب Vestiaire موقعك إلا أثناء استخدامك للتطبيق. ويمكنك الرفض واختيار مدينة يدويًا.</p>
+<h3>المتصفح المدمج</h3>
+<p>عندما تبحث عن صورة المنتج لقطعة ما، تُفتح الصفحات (محرك بحث الصور، والمتاجر) في متصفح مدمج في التطبيق. وكما في أي زيارة، تتلقى هذه المواقع عنوان IP الخاص بك، وقد تضع ملفات تعريف ارتباط يحتفظ بها المتصفح على الجهاز. وتطبّق هذه المواقع سياسات الخصوصية الخاصة بها. وينطلق البحث من كلمات التحليل، مثل العلامة التجارية ونوع القطعة.</p>
+<h3>خدمات Apple</h3>
+<p>تستخدم مزامنة iCloud الإشعارات الصامتة من Apple لمعرفة التغييرات التي تُجرى على أجهزتك الأخرى. أما الإشعار الصباحي، إذا فعّلته، فتجري جدولته على الجهاز نفسه.</p>
+<h2>4. ما لا يفعله Vestiaire</h2>
+<ul><li>لا حساب، ولا إعلانات، ولا تتبّع عبر التطبيقات أو المواقع، ولا قياس للجمهور، ولا تقارير أعطال تُرسَل إلى أي طرف ثالث.</li><li>لا بيع لبياناتك ولا مشاركة لها مع وسطاء البيانات أو المعلنين.</li><li>لا وصول إلى جهات اتصالك. وبالنسبة إلى «الصور»، لا يطلب Vestiaire سوى إذن إضافة الصور، لحفظ ملصقاتك وتذاكر الأمانات فيها. ولا يمنحه منتقي الصور إلا الصور التي تختارها. ولا تُستخدم الكاميرا إلا عندما تلتقط صورة.</li></ul>
+<h2>5. الخدمات التي تعالج البيانات لحساب Vestiaire</h2>
+<ul><li>شركة Anthropic (Claude): تحليل الصور والبحث عن صفحات المنتجات.</li><li>شركة Vercel: استضافة الخادم الوسيط.</li><li>شركة Supabase: عدّاد الحصة.</li><li>خدمة Open-Meteo: الطقس والبحث عن المدن.</li><li>شركة Apple: iCloud وتحديد الموقع الجغرافي والإشعارات.</li></ul>
+<p>قد تعالج هذه الخدمات البيانات خارج بلدك، ولا سيما في الولايات المتحدة.</p>
+<h2>6. خياراتك وحقوقك</h2>
+<ul><li>ارفض التحليل: تملأ البطاقات بنفسك.</li><li>ارفض الوصول إلى موقعك: تختار مدينة يدويًا.</li><li>أوقف iCloud لتطبيق Vestiaire من إعدادات iPhone. وتُحذف بيانات Vestiaire على iCloud من إعدادات iPhone: اضغط على اسمك، ثم iCloud، ثم إدارة التخزين.</li><li>احذف قطعًا، أو احذف التطبيق كله: فتختفي بياناته المحلية معه.</li></ul>
+<p>تتمتع بالحقوق التي يمنحك إياها القانون، ولا سيما اللائحة العامة لحماية البيانات (GDPR) في الاتحاد الأوروبي: الوصول، والتصحيح، والمحو، والاعتراض. ولأننا لا نحتفظ بأي بيانات مرتبطة بهويتك، فإن معظم هذه الحقوق تُمارَس مباشرةً داخل التطبيق. لأي طلب: vestiaire.assistance@icloud.com. ويمكنك أيضًا تقديم شكوى إلى سلطة حماية البيانات في بلدك.</p>
+<h2>7. الأطفال</h2>
+<p>لا يستهدف Vestiaire الأطفال، ولا يجمع عن علم أي بيانات تخصّهم.</p>
+<h2>8. التغييرات</h2>
+<p>إذا تغيّرت هذه السياسة، يتغيّر التاريخ في أعلى الصفحة أيضًا. وسيُشار إلى أي تغيير مهم داخل التطبيق.</p>
+<nav class="langues"><a href="../fr/confidentialite.html" lang="fr">Français</a> <a href="../en/confidentialite.html" lang="en-GB">English</a> <a href="../de/confidentialite.html" lang="de">Deutsch</a> <a href="../ru/confidentialite.html" lang="ru">Русский</a> <a href="../pt-PT/confidentialite.html" lang="pt-PT">Português (Portugal)</a> <a href="../pt-BR/confidentialite.html" lang="pt-BR">Português (Brasil)</a> <a href="../ar/confidentialite.html" lang="ar">العربية</a></nav>
+</main>
+</body>
+</html>

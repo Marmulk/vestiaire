@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidade do Vestiaire</title>
+<style>
+:root { --papier: #F4F1EC; --encre: #1A1917; --encre2: rgba(26,25,23,.64); --filet: rgba(26,25,23,.12); }
+@media (prefers-color-scheme: dark) { :root { --papier: #161514; --encre: #F2EFEA; --encre2: rgba(242,239,234,.64); --filet: rgba(242,239,234,.14); } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--papier); color: var(--encre); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+.maison { font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-size: 13px; color: var(--encre2); margin: 0 0 28px; }
+.maison a { color: inherit; text-decoration: none; }
+h1 { font-weight: 900; text-transform: uppercase; font-size: clamp(30px, 7vw, 46px); line-height: 1.02; letter-spacing: -.01em; margin: 0; padding-bottom: 14px; border-bottom: 2px solid var(--encre); }
+h2 { font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: 14px; margin: 40px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--encre); }
+h3 { font-size: 17px; margin: 26px 0 6px; }
+p, li { color: var(--encre); }
+ul { padding-inline-start: 1.2em; }
+li { margin: 6px 0; }
+a { color: var(--encre); }
+.date { color: var(--encre2); font-size: 15px; margin-top: 14px; }
+.a-choisir { background: #F2D27A; color: #1A1917; padding: 0 .25em; }
+nav.langues { margin-top: 56px; padding-top: 14px; border-top: 1px solid var(--filet); font-size: 14px; color: var(--encre2); }
+nav.langues a { margin-inline-end: 14px; color: var(--encre2); }
+</style>
+</head>
+<body>
+<main>
+<p class="maison"><a href="../index.html">Vestiaire</a></p>
+<h1>Política de privacidade do Vestiaire</h1>
+<p class="date">Última atualização: 30 de outubro de 2026</p>
+<h2>Em resumo</h2>
+<ul><li>O Vestiaire não tem conta, nem publicidade, nem rastreamento, nem ferramenta de medição de audiência.</li><li>Seu armário fica no seu iPhone e, se o iCloud estiver ativado, no seu espaço privado do iCloud, ao qual não temos acesso.</li><li>Para preencher a ficha de uma peça, a foto dela é enviada ao Claude, a inteligência artificial da Anthropic, por meio do nosso servidor intermediário, com o seu consentimento. Nem o servidor intermediário nem nós a guardamos.</li><li>O serviço de previsão do tempo só recebe uma localização aproximada, com precisão de um quilômetro.</li></ul>
+<h2>1. Quem é o responsável</h2>
+<p>O Vestiaire é desenvolvido e publicado por Magomed Mazaev. Para qualquer dúvida sobre seus dados: vestiaire.assistance@icloud.com.</p>
+<h2>2. O que fica no seu aparelho</h2>
+<p>As fotos das suas peças, as fichas delas (nome, marca, categoria, cores, material, estações, modelagem, estampa), seus looks, seu diário, suas viagens e seus ajustes ficam salvos no Vestiaire, no seu iPhone.</p>
+<p>Se o iCloud estiver ativado para o Vestiaire, esses dados são copiados para o banco de dados privado da sua conta do iCloud (CloudKit), para que você os encontre nos seus outros aparelhos. Lá, eles são gerenciados pela Apple, e só a sua conta pode lê-los: nós não temos acesso a eles.</p>
+<p>O widget “Look do dia” lê o look que o app deixa para ele no aparelho. Os backups “.vestiaire” que você exporta vão para onde você os envia (Arquivos, AirDrop, e-mail…).</p>
+<h2>3. O que sai do seu aparelho, e por quê</h2>
+<h3>A análise das peças pelo Claude</h3>
+<p>Quando você adiciona uma peça, pede ao Claude que releia seu armário ou busca a página do produto de uma peça, o Vestiaire envia ao nosso servidor intermediário:</p>
+<ul><li>a foto da peça, reduzida a 1.024 pixels de lado;</li><li>para a busca de uma página de produto, a marca e o nome da peça;</li><li>o idioma do app;</li><li>o identificador descrito mais abaixo.</li></ul>
+<p>O servidor intermediário, hospedado pela Vercel, repassa a foto e essas palavras ao Claude, da Anthropic, e depois envia a resposta de volta para você: os campos da ficha ou os endereços das páginas de produto. Para uma página de produto, o Claude busca na web a marca e o modelo que reconheceu. Nem o servidor intermediário nem nós guardamos as fotos ou as respostas. A Anthropic as trata conforme as condições da oferta profissional da empresa: ela não as usa para treinar seus modelos e só as guarda por um período limitado (veja a política de privacidade da Anthropic: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a>).</p>
+<p>O Vestiaire pede o seu consentimento antes do primeiro envio. Sem esse consentimento, você pode preencher as fichas por conta própria.</p>
+<h3>Um identificador aleatório</h3>
+<p>Na instalação, o Vestiaire gera ao acaso um identificador que não diz nada sobre você. Ele não está ligado à sua identidade, nem à sua conta Apple, nem aos identificadores de publicidade. Serve apenas para limitar o número de análises por aparelho e por dia (a cota). O contador do servidor intermediário, hospedado pela Supabase, contém apenas esse identificador e o número de solicitações do dia. Se você apagar o app e instalá-lo de novo, receberá um novo identificador.</p>
+<h3>A previsão do tempo</h3>
+<p>Para o clima do dia, o Vestiaire envia ao Open-Meteo (open-meteo.com) sua localização arredondada ao quilômetro. O Open-Meteo guarda seus registros técnicos, que podem conter essas coordenadas, por no máximo 90 dias. Para o clima de outra cidade ou de uma viagem, ele envia ao Open-Meteo o nome da cidade que você digita e, depois, as coordenadas dela. O nome da sua cidade é obtido pelo serviço de geolocalização da Apple. O Vestiaire só pede sua localização enquanto você usa o app. Você pode recusar e escolher uma cidade manualmente.</p>
+<h3>O navegador integrado</h3>
+<p>Quando você busca a foto do produto de uma peça, as páginas (buscador de imagens, lojas) abrem em um navegador integrado ao app. Como em qualquer visita, esses sites recebem seu endereço IP e podem salvar cookies, que o navegador guarda no aparelho. Eles aplicam a própria política de privacidade. A busca parte das palavras da análise, por exemplo, a marca e o tipo de peça.</p>
+<h3>Os serviços da Apple</h3>
+<p>A sincronização do iCloud usa as notificações silenciosas da Apple para saber das alterações feitas nos seus outros aparelhos. A notificação da manhã, se você a ativar, é programada no próprio aparelho.</p>
+<h2>4. O que o Vestiaire não faz</h2>
+<ul><li>Sem conta, sem publicidade, sem rastreamento entre apps ou sites, sem medição de audiência, sem relatório de falhas enviado a terceiros.</li><li>Nenhuma venda nem compartilhamento dos seus dados com corretores de dados ou anunciantes.</li><li>Sem acesso aos seus contatos. Quanto ao app Fotos, o Vestiaire pede apenas o direito de adicionar imagens, para salvar nele seus pôsteres e tíquetes. O seletor de fotos só entrega ao app as fotos que você escolher. A câmera só é usada quando você tira uma foto.</li></ul>
+<h2>5. Os serviços que tratam dados para o Vestiaire</h2>
+<ul><li>Anthropic (Claude): a análise das fotos e a busca de páginas de produto.</li><li>Vercel: a hospedagem do servidor intermediário.</li><li>Supabase: o contador da cota.</li><li>Open-Meteo: a previsão do tempo e a busca de cidades.</li><li>Apple: o iCloud, a geolocalização e as notificações.</li></ul>
+<p>Esses serviços podem tratar os dados em outros países além do seu, em especial nos Estados Unidos.</p>
+<h2>6. Suas escolhas e seus direitos</h2>
+<ul><li>Recuse a análise: você preenche as fichas por conta própria.</li><li>Recuse a localização: você escolhe uma cidade manualmente.</li><li>Desative o iCloud para o Vestiaire nos Ajustes do iPhone. Os dados do Vestiaire no iCloud podem ser apagados nos Ajustes do iPhone: toque no seu nome, depois em iCloud e, em seguida, no gerenciamento do armazenamento.</li><li>Apague peças, ou o app inteiro: os dados locais do app desaparecem com ele.</li></ul>
+<p>Você tem os direitos previstos em lei, em especial na Lei Geral de Proteção de Dados Pessoais (LGPD) e no Regulamento Geral sobre a Proteção de Dados (GDPR) da União Europeia: acesso, correção, eliminação, oposição. Como não guardamos nenhum dado ligado à sua identidade, a maioria desses direitos é exercida diretamente no app. Para qualquer pedido: vestiaire.assistance@icloud.com. Você também pode recorrer à autoridade de proteção de dados do seu país (no Brasil, a ANPD).</p>
+<h2>7. Crianças</h2>
+<p>O Vestiaire não se destina a crianças e não coleta intencionalmente nenhum dado sobre elas.</p>
+<h2>8. Alterações</h2>
+<p>Se esta política mudar, a data no topo da página também muda. Uma alteração importante será sinalizada no app.</p>
+<nav class="langues"><a href="../fr/confidentialite.html" lang="fr">Français</a> <a href="../en/confidentialite.html" lang="en-GB">English</a> <a href="../de/confidentialite.html" lang="de">Deutsch</a> <a href="../ru/confidentialite.html" lang="ru">Русский</a> <a href="../pt-PT/confidentialite.html" lang="pt-PT">Português (Portugal)</a> <a href="../pt-BR/confidentialite.html" lang="pt-BR">Português (Brasil)</a> <a href="../ar/confidentialite.html" lang="ar">العربية</a></nav>
+</main>
+</body>
+</html>
